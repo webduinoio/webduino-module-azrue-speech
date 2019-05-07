@@ -1,7 +1,7 @@
 Blockly.JavaScript['speech_result'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var code = '{0}'.format(speech_result(variable_azure));
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

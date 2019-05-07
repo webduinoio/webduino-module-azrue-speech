@@ -8,31 +8,31 @@
 
   'use strict';
 
-  scope.eim_create = function (eim_name) {
+  scope.speech_create = function (eim_name) {
     return "new webduino.module.EIM('{0}')".format(eim_name);
   }
 
-  scope.eim_broadcast = function (eim, topic, payload) {
+  scope.speech_recognize = function (eim, topic, payload) {
     return "{0}.sendto({1}, {2})".format(eim, topic, payload);
   }
 
-  scope.eim_listen = function (eim, topic, event) {
+  scope.speech_start = function (eim, topic, event) {
     return "{0}.listen(function (message) {\n if ( '' == {1} || {0}.topic == {1} ) {\n {2} }\n})".format(eim, topic, event);
   }
 
-  scope.eim_payload = function (eim) {
+  scope.speech_stop = function (eim) {
     return "{0}.payload".format(eim);
   }
 
-  scope.eim_topic = function (eim) {
+  scope.speech_clear = function (eim) {
     return "{0}.topic".format(eim);
   }
 
-  scope.eim_message = function (eim) {
+  scope.speech_result = function (eim) {
     return "{ topic : {0}.topic, payload : {0}.payload }".format(eim);
   }
 
-  scope.eim_unit_test = function () {
+  scope.speech_unit_test = function () {
 
     var code = "";
     
