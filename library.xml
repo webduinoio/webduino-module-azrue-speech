@@ -1,0 +1,304 @@
+<xml xmlns="http://www.w3.org/1999/xhtml"><block type="factory_base" id="`;^II1%0y0R9L$zzNoK#" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">speech_result</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="q+*DwK6)1UnuyUAv~)w0">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="]plpfIFf0Ix-:S0q[)9J">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="ekrvMl7?KkV3E9K-,3XU">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="]Pv8lDKG7c3iCDPN)_yb">
+                    <field name="TEXT">recognize result</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id=")d?:n%9)Q!eZp7mIXv(o" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Pgyg^f7hVcRk=z7KEkvE" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="`+f!92tt^DCBS*QjA``A"></shadow>
+      <block type="type_string" id="Nmd$E0z]9@w~P*6~0Q3q"></block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="r$h=SnU7$vq}m8r-n/-o">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="HDEXM`MLObmNT8!/D#b7" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTTOM"></mutation>
+    <field name="NAME">speech_recognize</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTTOM</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="kCwr^IjAvQbq4kp6)ji2">
+        <field name="INPUTNAME">topic</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="RZAwIeCgr,gb2?.b%acX">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="p,2^:/MaU6gS-fRmd_D#">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="T=4]ZmUwB,Y~%}u/R*)Z">
+                    <field name="TEXT">recognize</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="lv^8[`f[7yE9H/?vaSp4"></shadow>
+          <block type="type_string" id="!ejY?RD~/Wqm#x.NAtny"></block>
+        </value>
+        <next>
+          <block type="input_statement" id="a[$vg9q}dp_?P.TLAc5j">
+            <field name="INPUTNAME">include</field>
+            <field name="ALIGN">LEFT</field>
+            <value name="TYPE">
+              <shadow type="type_null" id="W2QS?DvHO3#*keyvhwmQ"></shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id=";:1oY@|$sv3O*c4ibL7k" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="7n`Ik+[I+b$.@C9)e/4[" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="hI[GEY3d`|~h.mP`Ef4?"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="wTq];D8BEoS+4k({(]ZI">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="`;^II1%0y0R9L$zzNoK#" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"></mutation>
+    <field name="NAME">speech_create</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="0%=E]EEE_^nRQcYm}Ek?">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="!V!%{-^:]Huu:1ni+o,G">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_input" id="-BHbW8rNh2X*[4GPXzFB">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_dropdown" id="S16e|a6Q%=dhqNapVb(e">
+                    <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                    <field name="FIELDNAME">language</field>
+                    <field name="USER0">Chinese</field>
+                    <field name="CPU0">Chinese - CN</field>
+                    <field name="USER1">English</field>
+                    <field name="CPU1">English - US</field>
+                    <field name="USER2">Japanese</field>
+                    <field name="CPU2">Japanese - JP</field>
+                    <field name="USER3">Russian</field>
+                    <field name="CPU3">Russian - RU</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id=")d?:n%9)Q!eZp7mIXv(o" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Pgyg^f7hVcRk=z7KEkvE" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="/O_P9Ph?esEDCzG+s+43"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="r$h=SnU7$vq}m8r-n/-o">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">speech_start</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
+                    <field name="TEXT">recognize start</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">speech_stop</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
+                    <field name="TEXT">recognize stop</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">speech_clear</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
+                    <field name="TEXT">clear result</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
+        <mutation colour="#5ba5a5"></mutation>
+        <field name="HUE">180</field>
+      </block>
+    </value>
+  </block></xml>

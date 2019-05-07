@@ -1,0 +1,25 @@
+{
+  "types": [
+    "eim_broadcast",
+    "eim_message",
+    "eim_create",
+    "eim_listen",
+    "eim_info",
+    "dict_get"
+  ],
+  "category": "azrue-speech",
+  "scripts": [
+    "stringFormat.js",
+    "azrue-speech-blockly.js",
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "stringFormat.js",
+    "microsoft.cognitiveservices.speech.sdk.bundle.min.js",
+    "azrue-speech.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}
