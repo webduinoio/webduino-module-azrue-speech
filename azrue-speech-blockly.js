@@ -8,43 +8,43 @@
 
   'use strict';
 
-  scope.speech_create = function (eim_name) {
-    return "new webduino.module.EIM('{0}')".format(eim_name);
+  scope.speech_create = function (Language) {
+    return "new webduino.module.AzrueSpeech('{0}')".format(Language);
   }
 
-  scope.speech_recognize = function (eim, topic, payload) {
-    return "{0}.sendto({1}, {2})".format(eim, topic, payload);
+  scope.speech_recognize = function (speech, topic, payload) {
+    return "{0}.sendto({1}, {2})".format(speech, topic, payload);
   }
 
-  scope.speech_start = function (eim, topic, event) {
-    return "{0}.listen(function (message) {\n if ( '' == {1} || {0}.topic == {1} ) {\n {2} }\n})".format(eim, topic, event);
+  scope.speech_start = function (speech, topic, event) {
+    return "{0}.listen(function (message) {\n if ( '' == {1} || {0}.topic == {1} ) {\n {2} }\n})".format(speech, topic, event);
   }
 
-  scope.speech_stop = function (eim) {
-    return "{0}.payload".format(eim);
+  scope.speech_stop = function (speech) {
+    return "{0}.payload".format(speech);
   }
 
-  scope.speech_clear = function (eim) {
-    return "{0}.topic".format(eim);
+  scope.speech_clear = function (speech) {
+    return "{0}.topic".format(speech);
   }
 
-  scope.speech_result = function (eim) {
-    return "{ topic : {0}.topic, payload : {0}.payload }".format(eim);
+  scope.speech_result = function (speech) {
+    return "{ topic : {0}.topic, payload : {0}.payload }".format(speech);
   }
 
   scope.speech_unit_test = function () {
 
     var code = "";
     
-    code += 'var eim = {0};\n'.format(eim_create("python"));
+    code += 'var speech = {0};\n'.format(speech_create("python"));
     
-    code += 'console.log({0});\n'.format("eim.socket.connected");
+    code += 'console.log({0});\n'.format("speech.socket.connected");
     
-    code += 'console.log({0});\n'.format(eim_message("eim"));
+    code += 'console.log({0});\n'.format(speech_message("speech"));
     
-    code += '{0};\n'.format(eim_listen("eim", "'eim/python'", 'console.log({0}, {1});\n'.format(eim_topic("eim"), eim_payload("eim"))));
+    code += '{0};\n'.format(speech_listen("speech", "'speech/python'", 'console.log({0}, {1});\n'.format(speech_topic("speech"), speech_payload("speech"))));
     
-    code += 'setInterval(function () { {0}; }, 5000);\n'.format(eim_broadcast("eim", "'eim/python'", "'print(\"hello\")'"));
+    code += 'setInterval(function () { {0}; }, 5000);\n'.format(speech_broadcast("speech", "'speech/python'", "'print(\"hello\")'"));
   
     console.log(code);
     // eval(code);

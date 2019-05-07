@@ -19,7 +19,7 @@ Blockly.JavaScript['speech_create'] = function(block) {
   var text_azure = block.getFieldValue('azure');
   var dropdown_language = block.getFieldValue('language');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...';
+  var code = speech_create(dropdown_language);
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

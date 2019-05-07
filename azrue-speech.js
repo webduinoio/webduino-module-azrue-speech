@@ -10,7 +10,7 @@
     var proto;
     var Module = scope.Module;
 
-    function AzrueSpeech() {
+    function AzrueSpeech(Language) {
         Module.call(this);
         this.result = '';
     }

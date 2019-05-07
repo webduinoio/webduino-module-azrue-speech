@@ -1,11 +1,11 @@
 {
   "types": [
-    "eim_broadcast",
-    "eim_message",
-    "eim_create",
-    "eim_listen",
-    "eim_info",
-    "dict_get"
+    "speech_result",
+    "variables_set",
+    "speech_recognize",
+    "speech_start",
+    "speech_stop",
+    "speech_clear"
   ],
   "category": "azrue-speech",
   "scripts": [
