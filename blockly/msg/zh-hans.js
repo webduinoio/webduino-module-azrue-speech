@@ -1,2 +1,2 @@
-MSG.catEim = '认知功能拓展';
-MSG.catEimCore = 'Azure 语音识别';
+MSG.catSpeech = 'Azure 语音功能拓展';
+MSG.catSpeechAzure = '语音识别';

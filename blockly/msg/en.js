@@ -1,2 +1,2 @@
-MSG.catSpeech = 'Speech Expand';
-MSG.catSpeechAzure = 'Speech Azure';
+MSG.catSpeech = 'Azure Speech Expand';
+MSG.catSpeechAzure = 'Speech Recognition';
