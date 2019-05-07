@@ -16,7 +16,7 @@
   ],
   "dependencies": [
     "stringFormat.js",
-    "microsoft.cognitiveservices.speech.sdk.bundle.min.js",
+    "microsoft.cognitiveservices.speech.sdk.bundle.js",
     "azrue-speech.js"
   ],
   "msg": "blockly/msg",
