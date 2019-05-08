@@ -12,7 +12,7 @@
     var lastRecognized = "", tempRecognizing = "";
     var reco;
 
-    function AzrueSpeech(Language = 'zh-CN') {
+    function AzrueSpeechToText(Language = 'zh-CN') {
         Module.call(this);
 
         var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
@@ -86,14 +86,14 @@
 
     }
 
-    AzrueSpeech.prototype = proto = Object.create(Module.prototype, {
+    AzrueSpeechToText.prototype = proto = Object.create(Module.prototype, {
         constructor: {
-            value: AzrueSpeech
+            value: AzrueSpeechToText
         }
     });
 
     proto.start = function () {
-        lastRecognized = "";
+        tempRecognizing = lastRecognized = "";
         reco.startContinuousRecognitionAsync();
     }
 
@@ -121,24 +121,21 @@
         return lastRecognized;
     }
 
-    scope.module.AzrueSpeech = AzrueSpeech;
+    proto.startOnTimer = function (Timeout) {
+        azure.start();
+        setTimeout(function () {
+            azure.stop();
+            console.log(azure.result());
+        }, Timeout);
+    }
+
+    scope.module.AzrueSpeechToText = AzrueSpeechToText;
 
 }));
 
 function unit_test() {
-    var azure;
-
-    azure = (new webduino.module.AzrueSpeech('zh-CN'));
-
-    azure.start();
-
-    setTimeout(function () {
-        azure.stop();
-    }, 20000);
-  
-    setInterval(function () {
-        console.log(azure.result());
-    }, 1000);
+    var azure = (new webduino.module.AzrueSpeechToText('zh-CN'));
+    azure.startOnTimer(30 * 1000);
 }
 
 // unit_test();
