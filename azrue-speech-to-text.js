@@ -12,11 +12,11 @@
     var lastRecognized = "", tempRecognizing = "";
     var reco;
 
-    function AzrueSpeechToText(Language = 'zh-CN') {
+    function AzrueSpeechToText(Language = 'zh-CN', region = 'eastasia') {
         Module.call(this);
 
         var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-        var speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', 'eastasia');
+        var speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', region);
 
         speechConfig.speechRecognitionLanguage = Language;
 

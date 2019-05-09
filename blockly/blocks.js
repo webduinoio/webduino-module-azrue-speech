@@ -14,10 +14,10 @@ Blockly.Blocks['speech_to_text_result'] = {
 Blockly.Blocks['speech_to_text_create'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("speech")
-        .appendField(new Blockly.FieldTextInput("azure"), "azure")
-        .appendField("language")
-        .appendField(new Blockly.FieldDropdown([["Chinese","zh-CN"], ["English","en-US"], ["Japanese","ja-JP"], ["Russian","ru-RU"]]), "language");
+        .appendField("speech language")
+        .appendField(new Blockly.FieldDropdown([["Chinese","zh-CN"], ["English","en-US"], ["Japanese","ja-JP"], ["Russian","ru-RU"]]), "language")
+        .appendField("server")
+        .appendField(new Blockly.FieldDropdown([["eastasia","eastasia"]]), "server");
     this.setOutput(true, null);
     this.setColour(195);
  this.setTooltip("");

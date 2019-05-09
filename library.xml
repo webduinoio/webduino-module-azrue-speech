@@ -53,27 +53,29 @@
       <block type="input_dummy" id="0%=E]EEE_^nRQcYm}Ek?">
         <field name="ALIGN">LEFT</field>
         <statement name="FIELDS">
-          <block type="field_static" id="!V!%{-^:]Huu:1ni+o,G">
-            <field name="TEXT">speech</field>
+          <block type="field_static" id="TI4b%aK84_yR,nv=j}~0">
+            <field name="TEXT">speech language</field>
             <next>
-              <block type="field_input" id="-BHbW8rNh2X*[4GPXzFB">
-                <field name="TEXT">azure</field>
-                <field name="FIELDNAME">azure</field>
+              <block type="field_dropdown" id="S16e|a6Q%=dhqNapVb(e">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                <field name="FIELDNAME">language</field>
+                <field name="USER0">Chinese</field>
+                <field name="CPU0">zh-CN</field>
+                <field name="USER1">English</field>
+                <field name="CPU1">en-US</field>
+                <field name="USER2">Japanese</field>
+                <field name="CPU2">ja-JP</field>
+                <field name="USER3">Russian</field>
+                <field name="CPU3">ru-RU</field>
                 <next>
-                  <block type="field_static" id="TI4b%aK84_yR,nv=j}~0">
-                    <field name="TEXT">language</field>
+                  <block type="field_static" id="qG-r.(+5[g.[45`(#XbG">
+                    <field name="TEXT">server</field>
                     <next>
-                      <block type="field_dropdown" id="S16e|a6Q%=dhqNapVb(e">
-                        <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
-                        <field name="FIELDNAME">language</field>
-                        <field name="USER0">Chinese</field>
-                        <field name="CPU0">zh-CN</field>
-                        <field name="USER1">English</field>
-                        <field name="CPU1">en-US</field>
-                        <field name="USER2">Japanese</field>
-                        <field name="CPU2">ja-JP</field>
-                        <field name="USER3">Russian</field>
-                        <field name="CPU3">ru-RU</field>
+                      <block type="field_dropdown" id="~4H/?y:[$wVsnkh=,:.,">
+                        <mutation options="[&quot;text&quot;]"></mutation>
+                        <field name="FIELDNAME">server</field>
+                        <field name="USER0">eastasia</field>
+                        <field name="CPU0">eastasia</field>
                       </block>
                     </next>
                   </block>

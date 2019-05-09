@@ -8,12 +8,8 @@
 
   'use strict';
 
-  scope.speech_to_text_create = function (Language) {
-    return "new webduino.module.AzrueSpeechToText('{0}')".format(Language);
-  }
-
-  scope.speech_to_text_recognize = function (speech, topic, payload) {
-    return "{0}.sendto({1}, {2})".format(speech, topic, payload);
+  scope.speech_to_text_create = function (language, region) {
+    return "new webduino.module.AzrueSpeechToText('{0}', '{1}')".format(language, region);
   }
 
   scope.speech_to_text_ontimer = function (speech, callback, timeout) {
