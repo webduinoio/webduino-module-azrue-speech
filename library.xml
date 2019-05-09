@@ -250,10 +250,10 @@
       </block>
     </value>
   </block><block type="factory_base" id="HDEXM`MLObmNT8!/D#b7" deletable="false" movable="false" x="10" y="10">
-    <mutation connections="BOTTOM"></mutation>
+    <mutation connections="BOTH"></mutation>
     <field name="NAME">speech_to_text_recognize</field>
     <field name="INLINE">AUTO</field>
-    <field name="CONNECTIONS">BOTTOM</field>
+    <field name="CONNECTIONS">BOTH</field>
     <statement name="INPUTS">
       <block type="input_dummy" id="/c*9B7+F/cORUKNN/Deu">
         <field name="ALIGN">LEFT</field>
@@ -305,8 +305,11 @@
         <field name="TEXT"></field>
       </block>
     </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="BbA|91q]:#Ra/^{`X]?A"></shadow>
+    </value>
     <value name="BOTTOMTYPE">
-      <shadow type="type_null" id="hI[GEY3d`|~h.mP`Ef4?"></shadow>
+      <shadow type="type_null" id="?0WU(2Aa/lXT%xRhg^H~"></shadow>
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="wTq];D8BEoS+4k({(]ZI">

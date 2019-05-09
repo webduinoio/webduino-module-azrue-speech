@@ -80,6 +80,7 @@ Blockly.Blocks['speech_to_text_recognize'] = {
         .appendField("seconds");
     this.appendStatementInput("include")
         .setCheck(null);
+    this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(195);
  this.setTooltip("");
