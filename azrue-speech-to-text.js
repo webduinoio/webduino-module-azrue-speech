@@ -121,21 +121,17 @@
         return lastRecognized;
     }
 
-    proto.startOnTimer = function (Timeout) {
-        azure.start();
-        setTimeout(function () {
-            azure.stop();
-            console.log(azure.result());
-        }, Timeout);
-    }
-
     scope.module.AzrueSpeechToText = AzrueSpeechToText;
 
 }));
 
 function unit_test() {
-    var azure = (new webduino.module.AzrueSpeechToText('zh-CN'));
-    azure.startOnTimer(30 * 1000);
+  azure = (new webduino.module.AzrueSpeechToText('zh-CN'));
+  azure.start();
+  setTimeout(function () {
+    azure.stop();
+    console.log(azure.result());
+  }, 5 * 1000);
 }
 
 // unit_test();
