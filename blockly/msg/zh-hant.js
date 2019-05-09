@@ -1,2 +1,3 @@
-MSG.catSpeech = 'Azure 语音功能拓展';
-MSG.catSpeechAzure = '语音识别';
+MSG.catSpeechAzure = 'Azure 语音拓展';
+MSG.catSpeechToText = '语音识别';
+MSG.catTextToSpeech = '语音合成';

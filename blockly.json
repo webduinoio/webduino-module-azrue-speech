@@ -1,11 +1,11 @@
 {
   "types": [
-    "speech_result",
     "variables_set",
-    "speech_recognize",
-    "speech_start",
-    "speech_stop",
-    "speech_clear"
+    "speech_to_text_result",
+    "speech_to_text_recognize",
+    "speech_to_text_start",
+    "speech_to_text_stop",
+    "speech_to_text_clear"
   ],
   "category": "azrue-speech",
   "scripts": [

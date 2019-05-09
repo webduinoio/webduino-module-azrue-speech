@@ -1,28 +1,26 @@
-<category id="catSpeech">
-  <category id="catSpeechAzure">
+<category id="catSpeechAzure">
+  <category id="catSpeechToText">
     <block type="console">
       <value name="console">
-        <block type="speech_result"></block>
+        <block type="speech_to_text_result"></block>
       </value>
     </block>
     <block type="variables_set">
       <field name="VAR">azure</field>
       <value name="VALUE">
-        <block type="speech_create"></block>
+        <block type="speech_to_text_create"></block>
       </value>
     </block>
-    <block type="speech_recognize">
-      <value name="topic">
-        <block type="text">
-          <field name="TEXT">hello</field>
-        </block>
-      </value>
+    <block type="speech_to_text_recognize">
     </block>
-    <block type="speech_start">
+    <block type="speech_to_text_start">
     </block>
-    <block type="speech_stop">
+    <block type="speech_to_text_stop">
     </block>
-    <block type="speech_clear">
+    <block type="speech_to_text_clear">
     </block>
+  </category>
+  <category id="catTextToSpeech">
+
   </category>
 </category>
