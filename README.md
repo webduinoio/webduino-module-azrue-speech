@@ -7,8 +7,8 @@ goto `https://bit.webduino.com.cn/blockly` website.
 
 see this
 
-![how_to_load](how_to_load.png)
+![how_to_load](readme/how_to_load.png)
 
-![how_to_use](how_to_use.png)
+![how_to_use](readme/how_to_use.png)
 
-![demo](demo.jpg)
+![demo](readme/demo.jpg)
