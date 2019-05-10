@@ -15,12 +15,22 @@
     function AzrueSpeechToText(Language = 'zh-CN', region = 'eastasia') {
         Module.call(this);
 
-        var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-        var speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', region);
+        this.audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
+        this.speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', region);
 
         speechConfig.speechRecognitionLanguage = Language;
 
-        reco = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+    }
+
+    AzrueSpeechToText.prototype = proto = Object.create(Module.prototype, {
+        constructor: {
+            value: AzrueSpeechToText
+        }
+    });
+
+    proto.start = function () {
+        
+        reco = new SpeechSDK.SpeechRecognizer(this.speechConfig, this.audioConfig);
 
         reco.recognizing = function (s, e) {
             // console.log(e);
@@ -84,15 +94,6 @@
             console.log("(speechEndDetected) SessionId: " + e.sessionId + "\r\n");
         };
 
-    }
-
-    AzrueSpeechToText.prototype = proto = Object.create(Module.prototype, {
-        constructor: {
-            value: AzrueSpeechToText
-        }
-    });
-
-    proto.start = function () {
         tempRecognizing = lastRecognized = "";
         reco.startContinuousRecognitionAsync();
     }
