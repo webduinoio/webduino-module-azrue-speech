@@ -2,7 +2,7 @@
 Blockly.JavaScript['speech_to_text_result'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.result()".format(variable_azure);
+  var code = "{0}.result();\n".format(variable_azure);
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -19,21 +19,21 @@ Blockly.JavaScript['speech_to_text_create'] = function(block) {
 Blockly.JavaScript['speech_to_text_start'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.start()".format(variable_azure);
+  var code = "{0}.start();\n".format(variable_azure);
   return code;
 };
 
 Blockly.JavaScript['speech_to_text_stop'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.stop()".format(variable_azure);
+  var code = "{0}.stop();\n".format(variable_azure);
   return code;
 };
 
 Blockly.JavaScript['speech_to_text_clear'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.clear()".format(variable_azure);
+  var code = "{0}.clear();\n".format(variable_azure);
   return code;
 };
 
