@@ -17,8 +17,7 @@
 
         this.audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
         this.speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', region);
-
-        speechConfig.speechRecognitionLanguage = Language;
+        this.speechConfig.speechRecognitionLanguage = Language;
 
     }
 
