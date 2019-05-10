@@ -118,6 +118,7 @@
     }
 
     proto.result = function () {
+        if (lastRecognized == "") return tempRecognizing;
         return lastRecognized;
     }
 

@@ -13,7 +13,7 @@
   }
 
   scope.speech_to_text_ontimer = function (speech, callback, timeout) {
-    return "{0}.start();\nsetTimeout(function (message) {\n  {0}.stop();\n  {1}\n}, {2} * 1000)".format(speech, callback, timeout);
+    return "{0}.start();\nsetTimeout(function (message) {\n  {0}.stop();\n{1}\n}, {2} * 1000)".format(speech, callback, timeout);
   }
 
   scope.speech_to_text_start = function (speech) {
