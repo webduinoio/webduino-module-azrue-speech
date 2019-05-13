@@ -13,11 +13,7 @@
     </block>
     <block type="speech_to_text_recognize">
     </block>
-    <block type="speech_to_text_start">
-    </block>
-    <block type="speech_to_text_stop">
-    </block>
-    <block type="speech_to_text_clear">
+    <block type="speech_to_text_function">
     </block>
   </category>
   <category id="catTextToSpeech">
