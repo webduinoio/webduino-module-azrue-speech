@@ -1,61 +1,71 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="x4L2!Ae(DYUOB(4n-OdP" x="113" y="88">
+  <block type="variables_set" id="ODg2;B!^P94E{NM_aVi9" x="138" y="63">
     <field name="VAR">azure</field>
     <value name="VALUE">
-      <block type="speech_to_text_create" id="z7ldG|+)vcl/Q-458r.+">
+      <block type="speech_to_text_create" id="({lT:EAMH=ZqjI7NOlML">
         <field name="language">zh-CN</field>
         <field name="server">eastasia</field>
       </block>
     </value>
     <next>
-      <block type="speech_to_text_start" id="jZf8MRk.Wx~fQD`AN(`B">
+      <block type="speech_to_text_function" id="_U|W`O?kb/ZwVQSEA#tk">
         <field name="azure">azure</field>
+        <field name="function">start</field>
         <next>
-          <block type="interval" id="!Q`ktF_AJ:?w%o4qnQ73">
+          <block type="interval" id="nv-W{/p#5K+*82Z}T}WF">
             <value name="secs_">
-              <block type="math_number" id="_8aiNeTl7)^+:lBu?@r%">
-                <field name="NUM">1</field>
+              <block type="math_number" id="XjXsyLG+ac8].g|[j9pi">
+                <field name="NUM">5</field>
               </block>
             </value>
             <statement name="do_">
-              <block type="demo_show_text" id="]zZLq^b3xM[g:9ccrES@">
-                <value name="show_">
-                  <block type="speech_to_text_result" id="QyZ6UL3YB+[X}i4W6rbj">
-                    <field name="azure">azure</field>
+              <block type="speech_to_text_recognize" id="9MwZY]Hw85PG`y,O5+nA">
+                <field name="azure">azure</field>
+                <field name="timeout">5</field>
+                <statement name="include">
+                  <block type="console" id="i3,=nPh*NN6[oh]tkWYi">
+                    <value name="console">
+                      <block type="speech_to_text_result" id="TTJnMk70N5pyBuUWSVRL">
+                        <field name="azure">azure</field>
+                      </block>
+                    </value>
                   </block>
-                </value>
+                </statement>
               </block>
             </statement>
             <next>
-              <block type="interval" id="874XBWyEN@nzs%t?]d0,">
+              <block type="delay" id="l^kj71[#c?7rSTQbDb_s">
                 <value name="secs_">
-                  <block type="math_number" id="Zi}Hqz9;S4UH@)P_)qOM">
-                    <field name="NUM">10</field>
+                  <block type="math_number" id="+*NMBgurHiM869(VbPc4">
+                    <field name="NUM">30</field>
                   </block>
                 </value>
-                <statement name="do_">
-                  <block type="speech_to_text_clear" id="0ps7TvCLJZu)GT/**Xb#">
+                <next>
+                  <block type="speech_to_text_function" id="P!%JV{)G}n@z}AC/u*+N">
                     <field name="azure">azure</field>
+                    <field name="function">stop</field>
+                    <next>
+                      <block type="delay" id="f8xu3/m.yTlD;b3b/*EJ">
+                        <value name="secs_">
+                          <block type="math_number" id="-)w`v@ZGvw`6Rv.K!wt3">
+                            <field name="NUM">30</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="speech_to_text_function" id="j.OdRRC-TGkQc|H4Eg08">
+                            <field name="azure">azure</field>
+                            <field name="function">start</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
         </next>
       </block>
     </next>
-  </block>
-  <block type="speech_to_text_recognize" id="x}+6TTKYSQ@]@s~iF!6A" disabled="true" x="188" y="363">
-    <field name="azure">azure</field>
-    <field name="timeout">5</field>
-    <statement name="include">
-      <block type="demo_show_text" id="Yzp7_-j}_{r,]Q[{3jxu">
-        <value name="show_">
-          <block type="speech_to_text_result" id="XQR+}U8Pv?].]d1wqu[}">
-            <field name="azure">azure</field>
-          </block>
-        </value>
-      </block>
-    </statement>
   </block>
 </xml>

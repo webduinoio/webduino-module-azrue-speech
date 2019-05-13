@@ -105,150 +105,6 @@
         <field name="HUE">195</field>
       </block>
     </value>
-  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
-    <mutation connections="BOTH"></mutation>
-    <field name="NAME">speech_to_text_start</field>
-    <field name="INLINE">INT</field>
-    <field name="CONNECTIONS">BOTH</field>
-    <statement name="INPUTS">
-      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
-        <field name="ALIGN">LEFT</field>
-        <statement name="FIELDS">
-          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
-            <field name="TEXT">speech</field>
-            <next>
-              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
-                <field name="TEXT">azure</field>
-                <field name="FIELDNAME">azure</field>
-                <next>
-                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
-                    <field name="TEXT">recognize start</field>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-    <value name="TOOLTIP">
-      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="HELPURL">
-      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="TOPTYPE">
-      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
-    </value>
-    <value name="BOTTOMTYPE">
-      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
-    </value>
-    <value name="COLOUR">
-      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
-        <mutation colour="#5b93a5"></mutation>
-        <field name="HUE">195</field>
-      </block>
-    </value>
-  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
-    <mutation connections="BOTH"></mutation>
-    <field name="NAME">speech_to_text_stop</field>
-    <field name="INLINE">INT</field>
-    <field name="CONNECTIONS">BOTH</field>
-    <statement name="INPUTS">
-      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
-        <field name="ALIGN">LEFT</field>
-        <statement name="FIELDS">
-          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
-            <field name="TEXT">speech</field>
-            <next>
-              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
-                <field name="TEXT">azure</field>
-                <field name="FIELDNAME">azure</field>
-                <next>
-                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
-                    <field name="TEXT">recognize stop</field>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-    <value name="TOOLTIP">
-      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="HELPURL">
-      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="TOPTYPE">
-      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
-    </value>
-    <value name="BOTTOMTYPE">
-      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
-    </value>
-    <value name="COLOUR">
-      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
-        <mutation colour="#5b93a5"></mutation>
-        <field name="HUE">195</field>
-      </block>
-    </value>
-  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
-    <mutation connections="BOTH"></mutation>
-    <field name="NAME">speech_to_text_clear</field>
-    <field name="INLINE">INT</field>
-    <field name="CONNECTIONS">BOTH</field>
-    <statement name="INPUTS">
-      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
-        <field name="ALIGN">LEFT</field>
-        <statement name="FIELDS">
-          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
-            <field name="TEXT">speech</field>
-            <next>
-              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
-                <field name="TEXT">azure</field>
-                <field name="FIELDNAME">azure</field>
-                <next>
-                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
-                    <field name="TEXT">clear result</field>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-    <value name="TOOLTIP">
-      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="HELPURL">
-      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="TOPTYPE">
-      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
-    </value>
-    <value name="BOTTOMTYPE">
-      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
-    </value>
-    <value name="COLOUR">
-      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
-        <mutation colour="#5b93a5"></mutation>
-        <field name="HUE">195</field>
-      </block>
-    </value>
   </block><block type="factory_base" id="HDEXM`MLObmNT8!/D#b7" deletable="false" movable="false" x="10" y="10">
     <mutation connections="BOTH"></mutation>
     <field name="NAME">speech_to_text_recognize</field>
@@ -313,6 +169,66 @@
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="wTq];D8BEoS+4k({(]ZI">
+        <mutation colour="#5b93a5"></mutation>
+        <field name="HUE">195</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">speech_to_text_function</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_variable" id="gl|m/.U9pfIwbc:q`BB@">
+                <field name="TEXT">azure</field>
+                <field name="FIELDNAME">azure</field>
+                <next>
+                  <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
+                    <field name="TEXT">recognize</field>
+                    <next>
+                      <block type="field_dropdown" id="SMDfJ+ul@?d!ISUmoE@E">
+                        <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                        <field name="FIELDNAME">function</field>
+                        <field name="USER0">start</field>
+                        <field name="CPU0">start</field>
+                        <field name="USER1">clear</field>
+                        <field name="CPU1">clear</field>
+                        <field name="USER2">stop</field>
+                        <field name="CPU2">stop</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
         <mutation colour="#5b93a5"></mutation>
         <field name="HUE">195</field>
       </block>
