@@ -16,32 +16,19 @@ Blockly.JavaScript['speech_to_text_create'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.JavaScript['speech_to_text_start'] = function(block) {
-  var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
-  // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.start();\n".format(variable_azure);
-  return code;
-};
-
-Blockly.JavaScript['speech_to_text_stop'] = function(block) {
-  var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
-  // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.stop();\n".format(variable_azure);
-  return code;
-};
-
-Blockly.JavaScript['speech_to_text_clear'] = function(block) {
-  var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
-  // TODO: Assemble JavaScript into code variable.
-  var code = "{0}.clear();\n".format(variable_azure);
-  return code;
-};
-
 Blockly.JavaScript['speech_to_text_recognize'] = function(block) {
   var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
   var text_timeout = block.getFieldValue('timeout');
   var statements_include = Blockly.JavaScript.statementToCode(block, 'include');
   // TODO: Assemble JavaScript into code variable.
   var code = '{0};\n'.format(speech_to_text_ontimer(variable_azure, statements_include, text_timeout));
+  return code;
+};
+
+Blockly.JavaScript['speech_to_text_function'] = function(block) {
+  var variable_azure = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('azure'), Blockly.Variables.NAME_TYPE);
+  var dropdown_function = block.getFieldValue('function');
+  // TODO: Assemble JavaScript into code variable.
+  var code = "{0}.{1}();\n".format(variable_azure, dropdown_function);
   return code;
 };

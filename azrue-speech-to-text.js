@@ -19,6 +19,32 @@
         this.speechConfig = SpeechSDK.SpeechConfig.fromSubscription('33ce2cd2893c4328afdee24cfeba051b', region);
         this.speechConfig.speechRecognitionLanguage = Language;
 
+    }
+
+    AzrueSpeechToText.prototype = proto = Object.create(Module.prototype, {
+        constructor: {
+            value: AzrueSpeechToText
+        }
+    });
+
+    proto.start = function () {
+        
+        if (lastRecognized == "")
+        {
+            lastRecognized = tempRecognizing;
+        }
+
+        if (reco != undefined)
+        {
+            reco.stopContinuousRecognitionAsync(
+                function () {
+                  ;
+                },
+                function (err) {
+                  ;
+                });
+        }
+
         reco = new SpeechSDK.SpeechRecognizer(this.speechConfig, this.audioConfig);
 
         reco.recognizing = function (s, e) {
@@ -27,7 +53,7 @@
             // console.log(lastRecognized + e.result.text);
             tempRecognizing = e.result.text;
         };
-
+ 
         reco.recognized = function (s, e) {
             // console.log(e);
 
@@ -87,30 +113,9 @@
         tempRecognizing = lastRecognized = "";
     }
 
-    AzrueSpeechToText.prototype = proto = Object.create(Module.prototype, {
-        constructor: {
-            value: AzrueSpeechToText
-        }
-    });
-
-    proto.start = function () {
-        
-    }
-
     proto.stop = function () {
-        if (lastRecognized == "")
-        {
-            lastRecognized = tempRecognizing;
-        }
-        reco.stopContinuousRecognitionAsync(
-            function () {
-                reco.close();
-                // reco = undefined;
-            },
-            function (err) {
-                reco.close();
-                // reco = undefined;
-            });
+        reco.close();
+        reco = undefined;
     }
 
     proto.clear = function () {
@@ -132,6 +137,11 @@ function unit_test() {
   setTimeout(function () {
     azure.stop();
     console.log(azure.result());
+    azure.start();
+    setTimeout(function () {
+      azure.stop();
+      console.log(azure.result());
+    }, 5 * 1000);
   }, 5 * 1000);
 }
 

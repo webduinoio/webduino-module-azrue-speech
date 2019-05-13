@@ -25,51 +25,6 @@ Blockly.Blocks['speech_to_text_create'] = {
   }
 };
 
-Blockly.Blocks['speech_to_text_start'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("speech")
-        .appendField(new Blockly.FieldVariable("azure"), "azure")
-        .appendField("recognize start");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(195);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['speech_to_text_stop'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("speech")
-        .appendField(new Blockly.FieldVariable("azure"), "azure")
-        .appendField("recognize stop");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(195);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['speech_to_text_clear'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("speech")
-        .appendField(new Blockly.FieldVariable("azure"), "azure")
-        .appendField("clear result");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(195);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 Blockly.Blocks['speech_to_text_recognize'] = {
   init: function() {
     this.appendDummyInput()
@@ -80,6 +35,22 @@ Blockly.Blocks['speech_to_text_recognize'] = {
         .appendField("seconds");
     this.appendStatementInput("include")
         .setCheck(null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(195);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['speech_to_text_function'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("speech")
+        .appendField(new Blockly.FieldVariable("azure"), "azure")
+        .appendField("recognize")
+        .appendField(new Blockly.FieldDropdown([["start","start"], ["clear","clear"], ["stop","stop"]]), "function");
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(195);
