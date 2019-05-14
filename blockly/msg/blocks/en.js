@@ -1,9 +1,9 @@
 
-Blockly.Msg.eim = "eim";
-Blockly.Msg.eim_broadcast = "broadcast";
-Blockly.Msg.eim_topic = "topic";
-Blockly.Msg.eim_payload = "payload";
-Blockly.Msg.eim_message = "message";
-Blockly.Msg.eim_listen = "listen";
-Blockly.Msg.eim_info = "every is message!";
-Blockly.Msg.eim_dict = "dict";
+Blockly.Msg.speech = "speech";
+Blockly.Msg.recognize = "recognize";
+Blockly.Msg.recognize_result = "recognize result";
+Blockly.Msg.speech_language = "speech language";
+Blockly.Msg.server = "server";
+Blockly.Msg.recognize_until = "recognize until";
+Blockly.Msg.seconds = "seconds";
+Blockly.Msg.say = "say";
