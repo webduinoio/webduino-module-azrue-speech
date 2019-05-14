@@ -32,6 +32,10 @@
     return "{0}.result()".format(speech);
   }
 
+  scope.text_to_speech_play = function (language, text) {
+    return "webduino.module.AzrueTextToSpeech('{0}', {1});\n".format(language, text);
+  }
+
   scope.speech_to_text_unit_test = function () {
 
     var code = "";
