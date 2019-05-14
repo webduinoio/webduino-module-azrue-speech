@@ -12,3 +12,5 @@ see this
 ![how_to_use](readme/how_to_use.png)
 
 ![demo](readme/demo.jpg)
+
+![demo](readme/introduce.png)
