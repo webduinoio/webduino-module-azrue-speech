@@ -233,4 +233,76 @@
         <field name="HUE">195</field>
       </block>
     </value>
+  </block><block type="factory_base" id="6gZ1oe^N4Kqy@:qJl;i+" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">text_to_speech_function</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="p#bM.~6hs=e*R4OG?(#2">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="(9O[-L/pla;lhpREk`#H">
+            <field name="TEXT">speech</field>
+            <next>
+              <block type="field_dropdown" id="vo?GwtKD+y,;5Dlg.*jt">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"></mutation>
+                <field name="FIELDNAME">language</field>
+                <field name="USER0">普通话</field>
+                <field name="CPU0">zh-CN</field>
+                <field name="USER1">粤語（香港）</field>
+                <field name="CPU1">zh-HK</field>
+                <field name="USER2">國語（臺灣）</field>
+                <field name="CPU2">zh-TW</field>
+                <field name="USER3">Deutsch</field>
+                <field name="CPU3">de-DE</field>
+                <field name="USER4">English(US)</field>
+                <field name="CPU4">en-US</field>
+                <field name="USER5">日本語</field>
+                <field name="CPU5">ja-JP</field>
+                <field name="USER6">한국의</field>
+                <field name="CPU6">ko-KR</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="Uks*VQi9r8o@pgP_`G=:">
+            <field name="INPUTNAME">text</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="Abl}N5lNk2$Bz]HXeJMG">
+                <field name="TEXT">say</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="EoS)P3YnCHd[hO2U[C6!"></shadow>
+              <block type="type_string" id="/,%F=O`VZ?pMfEP(m,)Y"></block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="dsTytl^O=pzg(bPp-WM3" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Wq-z#[SfL1G{R=2Yp`0U" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="6(#or4VU::vCj6u76KY."></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="`%`3UKp{3Wya;#`Pfgm0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="(~we(BDD!%?Bo*lKd0r_">
+        <mutation colour="#5b93a5"></mutation>
+        <field name="HUE">195</field>
+      </block>
+    </value>
   </block></xml>

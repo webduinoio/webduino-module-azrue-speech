@@ -58,3 +58,20 @@ Blockly.Blocks['speech_to_text_function'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['text_to_speech_function'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("speech")
+        .appendField(new Blockly.FieldDropdown([["普通话","zh-CN"], ["粤語（香港）","zh-HK"], ["國語（臺灣）","zh-TW"], ["Deutsch","de-DE"], ["English(US)","en-US"], ["日本語","ja-JP"], ["한국의","ko-KR"]]), "language");
+    this.appendValueInput("text")
+        .setCheck("String")
+        .appendField("say");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(195);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};

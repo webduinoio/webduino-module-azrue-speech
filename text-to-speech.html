@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>语音合成</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="audioJS.js"></script>
+</head>
+
+<body>
+    <script>
+
+        function createURL(url, param) {
+            var urlLink = '';
+            $.each(param, function (item, key) {
+                var link = '&' + item + "=" + key;
+                urlLink += link;
+            })
+            urlLink = url + "?" + urlLink.substr(1);
+            return urlLink.replace(' ', '');
+        }
+
+        AzrueTextToSpeech = function (language, text) {
+            // console.log(language, text);
+
+            var url = createURL('https://club.istemedu.com/wxapi/tts', {
+                'text': text,
+                'lang': language
+            });
+
+            // console.log(url);
+
+            var audio = window.audioJS({
+                file: url
+            });
+
+            audio.play();
+        }
+        
+        AzrueTextToSpeech('zh-CN', '1234');
+    </script>
+</body>
+
+</html>

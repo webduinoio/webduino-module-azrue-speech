@@ -32,3 +32,11 @@ Blockly.JavaScript['speech_to_text_function'] = function(block) {
   var code = "{0}.{1}();\n".format(variable_azure, dropdown_function);
   return code;
 };
+
+Blockly.JavaScript['text_to_speech_function'] = function(block) {
+  var dropdown_language = block.getFieldValue('language');
+  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
