@@ -17,6 +17,12 @@
     </block>
   </category>
   <category id="catTextToSpeech">
-
+    <block type="text_to_speech_function">
+      <value name="text">
+        <block type="text">
+          <field name="TEXT">0123456789</field>
+        </block>
+      </value>
+    </block>
   </category>
 </category>

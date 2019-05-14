@@ -37,6 +37,6 @@ Blockly.JavaScript['text_to_speech_function'] = function(block) {
   var dropdown_language = block.getFieldValue('language');
   var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = "webduino.module.AzrueTextToSpeech({0}, {1})();\n".format(dropdown_language, value_text);
   return code;
 };
