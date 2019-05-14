@@ -28,7 +28,7 @@ Blockly.Blocks['speech_to_text_create'] = {
 Blockly.Blocks['speech_to_text_recognize'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.server)
+      .appendField(Blockly.Msg.recognize)
       .appendField(new Blockly.FieldVariable("azure"), "azure")
       .appendField(Blockly.Msg.recognize_until)
       .appendField(new Blockly.FieldTextInput("5"), "timeout")
