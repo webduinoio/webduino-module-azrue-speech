@@ -20,7 +20,7 @@
     <block type="text_to_speech_function">
       <value name="text">
         <block type="text">
-          <field name="TEXT">0123456789</field>
+          <field name="TEXT">1234567890</field>
         </block>
       </value>
     </block>
